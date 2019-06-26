@@ -1,38 +1,13 @@
 {
   "name": "setgit",
   "description": "配置 Git。",
-  "scripts": {},
+  "scripts": {
+    "test": "cross-env NODE_ENV=test npx babel-node ./scripts/test"
+  },
   "engines": {
     "node": ">=10.13.0"
   },
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/iTonyYo/setgit.git"
-  },
-  "keywords": [
-    "git",
-    "setgit",
-    "cli",
-    "脚手架",
-    "scaffold",
-    "工具",
-    "tool",
-    "oopsunome"
-  ],
-  "author": {
-    "name": "iyowei",
-    "email": "swzyocowboy@icloud.com",
-    "url": "https://github.com/iTonyYo"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/iTonyYo/setgit/issues"
-  },
-  "homepage": "https://github.com/iTonyYo/setgit#readme",
-  "publishConfig": {
-    "access": "public"
-  },
   "babel": {
     "presets": [
       [
@@ -64,13 +39,73 @@
       "no-console": 0
     }
   },
+  "nyc": {
+    "check-coverage": false,
+    "per-file": true,
+    "reporter": [
+      "html"
+    ],
+    "report-dir": "./docs/coverage",
+    "cache": false,
+    "exclude": [
+      "**/?(*.)+(spec|test).[tj]s?(x)",
+      "test/**/*.js"
+    ],
+    "skip-empty": true,
+    "skip-full": true,
+    "clean": true
+  },
+  "mocha": {
+    "extension": [
+      "js"
+    ],
+    "timeout": 120000,
+    "ui": "tdd",
+    "color": true,
+    "delay": true,
+    "fullStackTrace": true,
+    "checkLeaks": true,
+    "retries": 2
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
     "babel-eslint": "^10.0.2",
     "babel-plugin-add-module-exports": "^1.0.2",
-    "eslint": "^6.0.1"
+    "cross-env": "^5.2.0",
+    "eslint": "^6.0.1",
+    "execa": "^2.0.1",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/iTonyYo/setgit.git"
+  },
+  "keywords": [
+    "git",
+    "setgit",
+    "cli",
+    "脚手架",
+    "scaffold",
+    "工具",
+    "tool",
+    "oopsunome"
+  ],
+  "author": {
+    "name": "iyowei",
+    "email": "swzyocowboy@icloud.com",
+    "url": "https://github.com/iTonyYo"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iTonyYo/setgit/issues"
+  },
+  "homepage": "https://github.com/iTonyYo/setgit#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }
