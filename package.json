@@ -1,0 +1,36 @@
+{
+  "name": "setgit",
+  "description": "配置 Git。",
+  "scripts": {},
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/iTonyYo/setgit.git"
+  },
+  "keywords": [
+    "git",
+    "setgit",
+    "cli",
+    "脚手架",
+    "scaffold",
+    "工具",
+    "tool",
+    "oopsunome"
+  ],
+  "author": {
+    "name": "iyowei",
+    "email": "swzyocowboy@icloud.com",
+    "url": "https://github.com/iTonyYo"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iTonyYo/setgit/issues"
+  },
+  "homepage": "https://github.com/iTonyYo/setgit#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
