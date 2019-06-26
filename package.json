@@ -39,6 +39,12 @@
       "no-console": 0
     }
   },
+  "eslintIgnore": [
+    "esm/**",
+    ".github/**",
+    ".vscode/**",
+    "docs/**"
+  ],
   "nyc": {
     "check-coverage": false,
     "per-file": true,
