@@ -1,5 +1,5 @@
 {
-  "name": "setgit",
+  "name": "setgit-cli",
   "description": "配置 Git。",
   "bin": {
     "setgit": "esm/main.js"
@@ -129,7 +129,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/iTonyYo/setgit.git"
+    "url": "git+ssh://git@github.com/iTonyYo/setgit-cli.git"
   },
   "keywords": [
     "git",
@@ -148,9 +148,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iTonyYo/setgit/issues"
+    "url": "https://github.com/iTonyYo/setgit-cli/issues"
   },
-  "homepage": "https://github.com/iTonyYo/setgit#readme",
+  "homepage": "https://github.com/iTonyYo/setgit-cli#readme",
   "publishConfig": {
     "access": "public"
   }
