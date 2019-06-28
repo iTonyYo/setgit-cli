@@ -1,0 +1,5 @@
+"use strict";
+
+const deepmerge = require('deepmerge');
+
+module.exports = deepmerge;

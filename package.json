@@ -1,13 +1,43 @@
 {
   "name": "setgit",
   "description": "配置 Git。",
+  "bin": {
+    "setgit": "esm/main.js"
+  },
   "scripts": {
+    "cli": "yarn build >/dev/null && ./esm/main.js",
+    "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/build",
+    "clean": "npx babel-node ./scripts/clean",
+    "license": "npx babel-node ./scripts/license",
+    "reprepare": "npx babel-node ./scripts/re-prepare",
+    "lint": "npx eslint --cache .",
     "test": "cross-env NODE_ENV=test npx babel-node ./scripts/test"
   },
   "engines": {
     "node": ">=10.13.0"
   },
+  "files": [
+    "esm/**/*.js"
+  ],
+  "dependencies": {
+    "async": "^3.1.0",
+    "chalk": "^2.4.2",
+    "cosmiconfig": "^5.2.1",
+    "deepmerge": "^3.3.0",
+    "gradient-string": "^1.2.0",
+    "is-git-repository": "^1.1.1",
+    "meow": "^5.0.0",
+    "nodegit": "^0.24.3",
+    "redent": "^3.0.0",
+    "update-notifier": "^3.0.0"
+  },
   "version": "1.0.0",
+  "private": false,
+  "git": {
+    "user.name": "沈委",
+    "user.email": "swzyocowboy@icloud.com",
+    "core.editor": "code"
+  },
   "babel": {
     "presets": [
       [
@@ -20,7 +50,8 @@
       ]
     ],
     "plugins": [
-      "add-module-exports"
+      "add-module-exports",
+      "@babel/plugin-proposal-class-properties"
     ]
   },
   "eslintConfig": {
@@ -36,7 +67,8 @@
       "sourceType": "module"
     },
     "rules": {
-      "no-console": 0
+      "no-console": 0,
+      "no-useless-catch": 0
     }
   },
   "eslintIgnore": [
@@ -77,6 +109,7 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
     "babel-eslint": "^10.0.2",
@@ -84,8 +117,15 @@
     "cross-env": "^5.2.0",
     "eslint": "^6.0.1",
     "execa": "^2.0.1",
+    "fast-glob": "^3.0.3",
+    "license-checker": "^25.0.1",
+    "listr": "^0.14.3",
+    "make-dir": "^3.0.0",
     "mocha": "^6.1.4",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "p-map": "^2.1.0",
+    "trash": "^6.0.0",
+    "write-file-atomic": "^3.0.0"
   },
   "repository": {
     "type": "git",
