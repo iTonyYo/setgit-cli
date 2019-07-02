@@ -2,6 +2,8 @@
 
 配置 Git。
 
+![Image of Yaktocat](https://raw.githubusercontent.com/iTonyYo/setgit-cli/master/example.gif)
+
 ## 安装
 
 ```shell
