@@ -78,7 +78,7 @@ class Cli {
 
   getUserDefinedConfig() {
     const explorer = cosmiconfig('git');
-    const foundConfig = explorer.searchSync();
+    const foundConfig = explorer.searchSync(this.workingPath);
 
     return isEmpty(foundConfig) ? {} : get(foundConfig, 'config');
   }
