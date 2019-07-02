@@ -42,12 +42,12 @@ class Cli {
         $ setgit [工作目录，默认：'process.cwd()']
 
       选项
-        --version, -V                                       查看版本号
-        --help, -h                                          查看帮助
+        --version, -V                                    查看版本号
+        --help, -h                                       查看帮助
 
       示例
-        $ setgit                                            为当前工作目录配置 Git
-        $ setgit ~/Development/iyowei/flatten-folder-cli    为指定工作目录配置 Git
+        $ setgit                                         为当前工作目录配置 Git
+        $ setgit /usr/pro/api.name.io                    为指定工作目录配置 Git
     `, {
       flags: {
         version: {
