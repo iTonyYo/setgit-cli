@@ -29,7 +29,7 @@
     "meow": "^5.0.0",
     "nodegit": "^0.24.3",
     "redent": "^3.0.0",
-    "update-notifier": "^3.0.0"
+    "update-notifier": "^3.0.1"
   },
   "version": "1.0.0",
   "private": false,
@@ -116,7 +116,7 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "cross-env": "^5.2.0",
     "eslint": "^6.0.1",
-    "execa": "^2.0.1",
+    "execa": "^2.0.2",
     "fast-glob": "^3.0.3",
     "license-checker": "^25.0.1",
     "listr": "^0.14.3",
