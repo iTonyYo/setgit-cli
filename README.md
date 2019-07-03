@@ -48,6 +48,27 @@ $ yarn global add setgit-cli
 
 [`setgit-cli`][setgit-cli] 从工作目录开始搜索配置，如果在根目录没有找到，会继续搜索子目录，直到找到有效的配置。
 
+默认的配置：
+```
+{
+  "core.ignorecase": "false",
+  "alias.med": "merge develop",
+  "alias.mem": "merge master",
+  "alias.le": "!git log --oneline --color | emojify | less -r",
+  "alias.ls": "ls-files",
+  "alias.co": "checkout",
+  "alias.tags": "tag -l",
+  "alias.stashes": "stash list",
+  "alias.b": "branch -a -v",
+  "alias.remotes": "remote -v",
+  "alias.out": "log @{u}..",
+  "alias.wdiff": "diff --color-words",
+  "alias.pull": "pull --ff-only",
+  "alias.amend": "!git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend",
+  "alias.fixup": "commit --fixup=HEAD",
+}
+```
+
 ## 贡献指南
 
 仔细查阅 [CONTRIBUTING.md][贡献指南] 以了解详情。
