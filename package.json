@@ -12,7 +12,9 @@
     "reprepare": "npx babel-node ./scripts/re-prepare",
     "lint": "npx eslint --cache .",
     "test": "cross-env NODE_ENV=test npx babel-node ./scripts/test",
-    "changelog": "npx auto-changelog -p"
+    "changelog": "npx auto-changelog -p",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=10.13.0"
@@ -30,7 +32,8 @@
     "meow": "^5.0.0",
     "nodegit": "^0.24.3",
     "redent": "^3.0.0",
-    "update-notifier": "^3.0.1"
+    "update-notifier": "^3.0.1",
+    "snyk": "^1.189.0"
   },
   "version": "1.0.0",
   "private": false,
@@ -176,5 +179,6 @@
   "homepage": "https://github.com/iTonyYo/setgit-cli#readme",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
