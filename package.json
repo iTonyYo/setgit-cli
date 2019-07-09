@@ -35,8 +35,6 @@
   "version": "1.0.0",
   "private": false,
   "git": {
-    "user.name": "沈委",
-    "user.email": "swzyocowboy@icloud.com",
     "core.editor": "code"
   },
   "babel": {
