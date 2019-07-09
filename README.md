@@ -1,4 +1,4 @@
-[![Package Quality](https://npm.packagequality.com/shield/setgit-cli.svg)](https://packagequality.com/#?package=setgit-cli)
+[![Maintainability](https://api.codeclimate.com/v1/badges/3f0bad62b3e1e0e70dec/maintainability)](https://codeclimate.com/github/iTonyYo/setgit-cli/maintainability) [![Package Quality](https://npm.packagequality.com/shield/setgit-cli.svg)](https://packagequality.com/#?package=setgit-cli)
 
 # $ setgit
 
