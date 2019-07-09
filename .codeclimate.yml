@@ -29,4 +29,4 @@ exclude_patterns:
 - "README.md"
 - "yarn.lock"
 - ".mailmap"
-- ".synk"
+- ".snyk"
