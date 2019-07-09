@@ -1,3 +1,5 @@
+[![Package Quality](https://npm.packagequality.com/shield/setgit-cli.svg)](https://packagequality.com/#?package=setgit-cli)
+
 # $ setgit
 
 配置 Git。
