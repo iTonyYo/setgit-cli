@@ -37,6 +37,20 @@
   "git": {
     "core.editor": "code"
   },
+  "gitignore": [
+    "macOS",
+    "Windows",
+    "Linux",
+    "Node",
+    "VisualStudioCode",
+    "SublimeText",
+    "CVS",
+    "Diff",
+    "Vim",
+    "TortoiseGit",
+    "Diff",
+    "Patch"
+  ],
   "babel": {
     "presets": [
       [
