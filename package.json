@@ -35,7 +35,7 @@
     "update-notifier": "^3.0.1",
     "snyk": "^1.217.3"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "git": {
     "core.editor": "code"

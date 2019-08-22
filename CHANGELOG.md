@@ -1,5 +1,11 @@
 # [`setgit-cli`][setgit-cli] 更新日志
 
+## [v1.0.2](https://github.com/iTonyYo/setgit-cli/compare/v1.0.1...v1.0.2) - 2019-08-22
+
+#### 提交
+
+- [[`45e0002`](https://github.com/iTonyYo/setgit-cli/commit/45e0002c79db2c93285624c5ee739c0f791ba0df)] 依赖: :arrow_up: 更新依赖
+- [[`796c63e`](https://github.com/iTonyYo/setgit-cli/commit/796c63ee99233522b56ca97430e8efe7de73d018)] 文档: :memo: 更新 Git 提交指南
 ## [v1.0.1](https://github.com/iTonyYo/setgit-cli/compare/v1.0.0...v1.0.1) - 2019-07-09
 
 ### 混合
@@ -11,14 +17,15 @@
 
 - [[`06119ba`](https://github.com/iTonyYo/setgit-cli/commit/06119baea1abf434cc3842eea0d65e5ee49be42d)] 配置: :wrench: 新增 `snyk` 配置
 - [[`ad2c670`](https://github.com/iTonyYo/setgit-cli/commit/ad2c670117962cdab6ecea529ebc64b8fd6af511)] 依赖: :package: 升级依赖
+- [[`f69586c`](https://github.com/iTonyYo/setgit-cli/commit/f69586c37728b972da7608b37df8a98fb3e8007b)] 发版: :bookmark: v1.0.1
 - [[`de44f95`](https://github.com/iTonyYo/setgit-cli/commit/de44f95acfe841bf85b3468fc5ed99b38cc1dc1d)] 文档: :memo: 新增 Git 提交指南
 - [[`0d908a6`](https://github.com/iTonyYo/setgit-cli/commit/0d908a647c6b1fa1b489b8b8544256ace1fe1711)] 配置: :wrench: 新增 `gitignore` 配置
 - [[`f3cf75f`](https://github.com/iTonyYo/setgit-cli/commit/f3cf75f4282baeb5986825401805ab2359cfda6f)] 配置: :wrench: 新增 `Code Climate` 配置
 - [[`46272fa`](https://github.com/iTonyYo/setgit-cli/commit/46272fabb4d629f6646a44c8e2f7d999023e8419)] 格式: :art: 调整 `./src/getWorkingDirectory.js` 书写
-- [[`b755e7f`](https://github.com/iTonyYo/setgit-cli/commit/b755e7f68a7e9b6bfe45d0b1dc026829f00d0690)] 文档: :memo: 新增 `Package Quality` 徽章
 - [[`2df7146`](https://github.com/iTonyYo/setgit-cli/commit/2df714648079eb05d548d5afb1f222cd085d4b23)] 文档: :memo: 新增 `Code Climate` 徽章
-- [[`e3d9454`](https://github.com/iTonyYo/setgit-cli/commit/e3d9454c56352c2dacdde93c0540102354dbed34)] 配置: :wrench: 更新 `git` 配置
 - [[`5882a9a`](https://github.com/iTonyYo/setgit-cli/commit/5882a9abd9f57d6b9f134c101109ed1616981328)] 配置: :wrench: 新增 `.snyk` 文件到 `Code Climate` 忽略规则中
+- [[`b755e7f`](https://github.com/iTonyYo/setgit-cli/commit/b755e7f68a7e9b6bfe45d0b1dc026829f00d0690)] 文档: :memo: 新增 `Package Quality` 徽章
+- [[`e3d9454`](https://github.com/iTonyYo/setgit-cli/commit/e3d9454c56352c2dacdde93c0540102354dbed34)] 配置: :wrench: 更新 `git` 配置
 - [[`50db5c4`](https://github.com/iTonyYo/setgit-cli/commit/50db5c4579ca7d0ab925b621b76075183adcaf7d)] 配置: :wrench: 新增 `.synk` 文件到 `Code Climate` 忽略规则中
 ## v1.0.0 - 2019-07-03
 
