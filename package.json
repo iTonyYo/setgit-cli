@@ -30,10 +30,10 @@
     "gradient-string": "^1.2.0",
     "is-git-repository": "^1.1.1",
     "meow": "^5.0.0",
-    "nodegit": "^0.25.1",
+    "nodegit": "^0.26.0",
     "redent": "^3.0.0",
     "update-notifier": "^3.0.1",
-    "snyk": "^1.224.0"
+    "snyk": "^1.226.2"
   },
   "version": "1.0.2",
   "private": false,
@@ -131,12 +131,12 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.0",
     "auto-changelog": "^1.16.1",
     "babel-eslint": "^10.0.3",
     "babel-plugin-add-module-exports": "^1.0.2",
