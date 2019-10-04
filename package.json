@@ -33,7 +33,7 @@
     "nodegit": "^0.26.0",
     "redent": "^3.0.0",
     "update-notifier": "^3.0.1",
-    "snyk": "^1.226.2"
+    "snyk": "^1.230.5"
   },
   "version": "1.0.2",
   "private": false,
