@@ -432,7 +432,7 @@
 "semver@6.3.0","ISC","https://github.com/npm/node-semver"
 "set-blocking@2.0.0","ISC","https://github.com/yargs/set-blocking"
 "set-value@2.0.1","MIT","https://github.com/jonschlinkert/set-value"
-"setgit-cli@1.0.2","MIT","https://github.com/iTonyYo/setgit-cli"
+"setgit-cli@1.0.3","MIT","https://github.com/iTonyYo/setgit-cli"
 "setprototypeof@1.1.1","ISC","https://github.com/wesleytodd/setprototypeof"
 "shebang-command@2.0.0","MIT","https://github.com/kevva/shebang-command"
 "shebang-regex@3.0.0","MIT","https://github.com/sindresorhus/shebang-regex"
