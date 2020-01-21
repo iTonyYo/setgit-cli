@@ -30,7 +30,7 @@
     "gradient-string": "^1.2.0",
     "is-git-repository": "^1.1.1",
     "meow": "^5.0.0",
-    "nodegit": "^0.26.2",
+    "nodegit": "^0.26.3",
     "redent": "^3.0.0",
     "update-notifier": "^3.0.1",
     "snyk": "^1.234.2"
