@@ -32,8 +32,8 @@
     "meow": "^5.0.0",
     "nodegit": "^0.26.2",
     "redent": "^3.0.0",
-    "update-notifier": "^3.0.1",
-    "snyk": "^1.234.2"
+    "update-notifier": "^4.0.0",
+    "snyk": "^1.290.1"
   },
   "version": "1.0.3",
   "private": false,
