@@ -29,7 +29,7 @@
     "deepmerge": "^4.1.1",
     "gradient-string": "^1.2.0",
     "is-git-repository": "^1.1.1",
-    "meow": "^5.0.0",
+    "meow": "^6.1.0",
     "nodegit": "^0.26.2",
     "redent": "^3.0.0",
     "update-notifier": "^3.0.1",
