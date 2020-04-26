@@ -22,7 +22,7 @@
   "files": [
     "esm/**/*.js"
   ],
-  "version": "1.0.3",
+  "version": "1.1.0",
   "private": false,
   "git": {
     "core.editor": "vim"
