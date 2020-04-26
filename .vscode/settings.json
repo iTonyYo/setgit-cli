@@ -52,16 +52,16 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "files.autoSave": "onWindowChange",
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
     "**/.DS_Store": true,
-    "**/*.har": true,
+    "**/.git": true,
+    "**/.hg": true,
     "**/.nyc_output": true,
-    "**/node_modules": true,
+    "**/.svn": true,
+    "**/*.har": true,
+    "**/CVS": true,
     "**/data": true,
-    "**/dump.rdb": true
+    "**/dump.rdb": true,
+    "**/node_modules": true
   },
   "csv-preview.lineNumbers": "ordinal",
   "csv-preview.resizeColumns": "all",
