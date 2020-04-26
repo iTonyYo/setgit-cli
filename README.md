@@ -54,20 +54,30 @@ $ yarn global add setgit-cli
 ```
 {
   "core.ignorecase": "false",
+
+  "alias.s": "status",
+  "alias.p": "push",
+  "alias.b": "branch -a -v",
+  "alias.pl": "pull --ff-only",
   "alias.med": "merge develop",
   "alias.mem": "merge master",
-  "alias.le": "!git log --oneline --color | emojify | less -r",
-  "alias.ls": "ls-files",
-  "alias.co": "checkout",
   "alias.tags": "tag -l",
+  "alias.co": "checkout",
   "alias.stashes": "stash list",
-  "alias.b": "branch -a -v",
-  "alias.remotes": "remote -v",
+
+  "alias.l": "log -16 --color=always --all --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative",
+  "alias.ll": "log --color=always --all --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit",
+  "alias.lg": "log -10 --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative",
+  "alias.lgl": "log --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit",
+  "alias.le": "!git log --oneline --color | emojify | less -r",
   "alias.out": "log @{u}..",
+
   "alias.wdiff": "diff --color-words",
-  "alias.pull": "pull --ff-only",
   "alias.amend": "!git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend",
   "alias.fixup": "commit --fixup=HEAD",
+
+  "alias.ls": "ls-files",
+  "alias.remotes": "remote -v",
 }
 ```
 

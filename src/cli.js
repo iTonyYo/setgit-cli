@@ -22,12 +22,16 @@ class Cli {
         $ setgit [工作目录，默认：'process.cwd()']
 
       选项
-        --version, -v                                    查看版本号
-        --help, -h                                       查看帮助
+        --version, -v                              查看版本号
+        --help, -h                                 查看帮助
 
       示例
-        $ setgit                                         为当前工作目录配置 Git
-        $ setgit /usr/pro/api.name.io                    为指定工作目录配置 Git
+        $ setgit                                   为当前工作目录配置 Git
+        $ setgit /usr/pro/api.name.io              为指定工作目录配置 Git
+
+      提示
+        检测到用户未提供自定义配置时，\`setgit\` 将会使用默认配置，详情参见
+        https://github.com/iTonyYo/setgit-cli#配置。
     `, {
       flags: {
         version: {
@@ -61,7 +65,7 @@ class Cli {
     if (isEmpty(this.userDefinedConfig)) {
       console.log(redent(chalk `
         {bold ${gradient.rainbow('操作成功!')}}
-        {grey 检测到未自定义配置，\`setgit\` 使用了默认配置。}
+        {grey 检测到您未提供自定义配置，\`setgit\` 使用了默认配置。}
 
         {grey 操作目录：}
         {grey ${this.workingPath}}

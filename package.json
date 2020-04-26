@@ -5,7 +5,7 @@
     "setgit": "esm/main.js"
   },
   "scripts": {
-    "cli": "yarn build >/dev/null && ./esm/main.js -h",
+    "cli": "yarn build >/dev/null && ./esm/simulation.js -h",
     "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/build",
     "clean": "npx babel-node ./scripts/clean",
     "license": "npx babel-node ./scripts/license",
@@ -24,6 +24,9 @@
   ],
   "version": "1.0.3",
   "private": false,
+  "git": {
+    "core.editor": "vim"
+  },
   "gitignore": [
     "macOS",
     "Windows",
