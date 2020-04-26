@@ -1,5 +1,10 @@
 # [`setgit-cli`][setgit-cli] 更新日志
 
+## [v1.1.1](https://github.com/iTonyYo/setgit-cli/compare/v1.1.0...v1.1.1) - 2020-04-26
+
+#### 提交
+
+- [[`10fca13`](https://github.com/iTonyYo/setgit-cli/commit/10fca137afad4e41e3968d645132f8d39c1ff28b)] 依赖: :heavy_minus_sign: 更新生产依赖
 ## [v1.1.0](https://github.com/iTonyYo/setgit-cli/compare/v1.0.3...v1.1.0) - 2020-04-26
 
 #### 提交
