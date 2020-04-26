@@ -19,16 +19,22 @@ $ yarn global add setgit-cli
 ## 使用
 
 ```
+配置 Git。
+
 使用方式
   $ setgit [工作目录，默认：'process.cwd()']
 
 选项
-  --version, -V                                 查看版本号
-  --help, -h                                    查看帮助
+  --version, -v                              查看版本号
+  --help, -h                                 查看帮助
 
 示例
-  $ setgit                                      为当前工作目录配置 Git
-  $ setgit /usr/pro/api.name.io                 为指定工作目录配置 Git
+  $ setgit                                   为当前工作目录配置 Git
+  $ setgit /usr/pro/api.name.io              为指定工作目录配置 Git
+
+提示
+  检测到用户未提供自定义配置时，`setgit` 将会使用默认配置，详情参见
+  https://github.com/iTonyYo/setgit-cli#配置。
 ```
 
 ## 配置
