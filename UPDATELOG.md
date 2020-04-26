@@ -1,5 +1,10 @@
 # [`setgit-cli`][setgit-cli] 更新日志
 
+## [v1.1.2](https://github.com/iTonyYo/setgit-cli/compare/v1.1.1...v1.1.2) - 2020-04-26
+
+#### 提交
+
+- [[`f1cdb06`](https://github.com/iTonyYo/setgit-cli/commit/f1cdb060f030ab8ba2871b189ba82bf8b6a136cc)] 修复: :bug: 未能运行，且报错
 ## [v1.1.1](https://github.com/iTonyYo/setgit-cli/compare/v1.1.0...v1.1.1) - 2020-04-26
 
 #### 提交
