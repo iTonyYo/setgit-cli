@@ -6,7 +6,7 @@ import redent from 'redent';
 import gradient from 'gradient-string';
 import chalk from 'chalk';
 
-import pkg from '../package.json';
+import { name, version } from '../package.json';
 import isEmpty from './utilities/isEmpty';
 import get from './utilities/get';
 
@@ -15,7 +15,7 @@ import setGit from './setGit';
 
 class Cli {
   constructor() {
-    updateNotifier({ pkg }).notify();
+    updateNotifier({ pkg: { name, version } }).notify();
 
     this.cli = meow(`
       使用方式

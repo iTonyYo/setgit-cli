@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import Cli from './cli';
+const Cli = require('./lib/cli');
 
 (async () => {
   try {
@@ -10,3 +10,5 @@ import Cli from './cli';
     throw error;
   }
 })();
+
+// 在命令行直接使用该脚本前，需要先修改它的属性，`chmod +x ./simulation.js`。

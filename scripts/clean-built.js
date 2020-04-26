@@ -4,5 +4,6 @@ import { resolveCwd } from './paths';
 (async () => {
   await trash([
     resolveCwd('esm'),
+    resolveCwd('lib'),
   ]);
 })();

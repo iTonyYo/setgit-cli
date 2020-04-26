@@ -1,22 +1,23 @@
-import { join, dirname } from 'path';
-import pMap from 'p-map';
+import { realpathSync } from 'fs';
+import { join, dirname, resolve } from 'path';
+
 import fg from 'fast-glob';
 import execa from 'execa';
-import chalk from 'chalk';
 
-import { resolveCwd } from './paths';
+import pMap from 'p-map';
 
+const appDirectory = realpathSync(process.cwd());
+const resolveCwd   = relativePath => resolve(appDirectory, relativePath);
+
+// 异步工作流
 async function run() {
   await pMap(await getSrcs(), async (src) => {
     await build(src);
     return;
   }, { concurrency: 8 });
-
-  await execa('chmod', ['+x', resolveCwd('esm/simulation.js')]);
-
-  console.log(chalk `{greenBright 构建成功!}`);
 }
 
+// 获取待转译的文件
 async function getSrcs() {
   const srcs = await fg([
     'src/**/*.js',
@@ -26,6 +27,7 @@ async function getSrcs() {
   return srcs;
 }
 
+// 转译核心
 async function build(src) {
   await execa(
     'npx',
@@ -38,19 +40,12 @@ async function build(src) {
   );
 }
 
+// 获取输出路径：在输出根目录下，保留相对路径。
 function getDestPath(path) {
   return dirname(
     join(
-      resolveCwd('esm'),
+      resolveCwd('lib'),
       path.substring('src/'.length, path.length),
     )
   );
 }
-
-(async () => {
-  try {
-    await run();
-  } catch (err) {
-    throw(err);
-  }
-})();

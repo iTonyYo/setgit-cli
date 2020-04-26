@@ -2,11 +2,11 @@
   "name": "setgit-cli",
   "description": "配置 Git。",
   "bin": {
-    "setgit": "esm/main.js"
+    "setgit": "lib/cli.js"
   },
   "scripts": {
-    "cli": "yarn build >/dev/null && ./esm/simulation.js -h",
-    "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/build",
+    "simulate": "./simulation.js -h",
+    "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/pack",
     "clean": "npx babel-node ./scripts/clean",
     "license": "npx babel-node ./scripts/license",
     "reprepare": "npx babel-node ./scripts/re-prepare",
@@ -126,9 +126,12 @@
     "is-git-repository": "^1.1.1",
     "meow": "^6.1.0",
     "nodegit": "^0.26.5",
+    "p-series": "^2.1.0",
     "redent": "^3.0.0",
-    "update-notifier": "^4.1.0",
-    "snyk": "^1.311.0"
+    "rollup": "^2.7.2",
+    "snyk": "^1.311.0",
+    "terser": "^4.6.12",
+    "update-notifier": "^4.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -137,6 +140,7 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.5",
     "@babel/register": "^7.9.0",
+    "@rollup/plugin-json": "^4.0.3",
     "auto-changelog": "^2.0.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-add-module-exports": "^1.0.2",
