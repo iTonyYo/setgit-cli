@@ -9,7 +9,7 @@ var _meow = _interopRequireDefault(require("meow"));
 
 var _updateNotifier = _interopRequireDefault(require("update-notifier"));
 
-var _cosmiconfig = _interopRequireDefault(require("cosmiconfig"));
+var _cosmiconfig = require("cosmiconfig");
 
 var _isGitRepository = _interopRequireDefault(require("is-git-repository"));
 
@@ -31,7 +31,6 @@ var _setGit = _interopRequireDefault(require("./setGit"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// 待办： 如果未自定义配置，提示 `正在使用默认的配置`
 class Cli {
   constructor() {
     (0, _updateNotifier.default)({
@@ -42,7 +41,7 @@ class Cli {
         $ setgit [工作目录，默认：'process.cwd()']
 
       选项
-        --version, -V                                    查看版本号
+        --version, -v                                    查看版本号
         --help, -h                                       查看帮助
 
       示例
@@ -77,7 +76,18 @@ class Cli {
   }
 
   success() {
-    console.log((0, _redent.default)(_chalk.default`
+    if ((0, _isEmpty.default)(this.userDefinedConfig)) {
+      console.log((0, _redent.default)((0, _chalk.default)`
+        {bold ${_gradientString.default.rainbow('操作成功!')}}
+        {grey 检测到未自定义配置，\`setgit\` 使用了默认配置。}
+
+        {grey 操作目录：}
+        {grey ${this.workingPath}}
+      `));
+      return;
+    }
+
+    console.log((0, _redent.default)((0, _chalk.default)`
       {greenBright.bold ${_gradientString.default.rainbow('操作成功!')}}
 
       {grey 操作目录：}
@@ -86,7 +96,7 @@ class Cli {
   }
 
   error() {
-    console.error((0, _redent.default)(_chalk.default`
+    console.error((0, _redent.default)((0, _chalk.default)`
       {redBright.bold 这不是一个 Git 仓库!}
 
       {grey 操作目录：}
@@ -95,8 +105,8 @@ class Cli {
   }
 
   getUserDefinedConfig() {
-    const explorer = (0, _cosmiconfig.default)('git');
-    const foundConfig = explorer.searchSync(this.workingPath);
+    const explorerSync = (0, _cosmiconfig.cosmiconfigSync)('git');
+    const foundConfig = explorerSync.search(this.workingPath);
     return (0, _isEmpty.default)(foundConfig) ? {} : (0, _get.default)(foundConfig, 'config');
   }
 

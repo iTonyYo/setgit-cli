@@ -1,6 +1,6 @@
 import meow from 'meow';
 import updateNotifier from 'update-notifier';
-import cosmiconfig from 'cosmiconfig';
+import { cosmiconfigSync } from 'cosmiconfig';
 import isGit from 'is-git-repository';
 import redent from 'redent';
 import gradient from 'gradient-string';
@@ -13,7 +13,6 @@ import get from './utilities/get';
 import getWorkingDirectory from './getWorkingDirectory';
 import setGit from './setGit';
 
-// 待办： 如果未自定义配置，提示 `正在使用默认的配置`
 class Cli {
   constructor() {
     updateNotifier({ pkg }).notify();
@@ -23,7 +22,7 @@ class Cli {
         $ setgit [工作目录，默认：'process.cwd()']
 
       选项
-        --version, -V                                    查看版本号
+        --version, -v                                    查看版本号
         --help, -h                                       查看帮助
 
       示例
@@ -59,6 +58,18 @@ class Cli {
   }
 
   success() {
+    if (isEmpty(this.userDefinedConfig)) {
+      console.log(redent(chalk `
+        {bold ${gradient.rainbow('操作成功!')}}
+        {grey 检测到未自定义配置，\`setgit\` 使用了默认配置。}
+
+        {grey 操作目录：}
+        {grey ${this.workingPath}}
+      `));
+
+      return;
+    }
+
     console.log(redent(chalk `
       {greenBright.bold ${gradient.rainbow('操作成功!')}}
 
@@ -77,8 +88,8 @@ class Cli {
   }
 
   getUserDefinedConfig() {
-    const explorer = cosmiconfig('git');
-    const foundConfig = explorer.searchSync(this.workingPath);
+    const explorerSync = cosmiconfigSync('git');
+    const foundConfig = explorerSync.search(this.workingPath);
 
     return isEmpty(foundConfig) ? {} : get(foundConfig, 'config');
   }
