@@ -1,20 +1,19 @@
-import { readFileSync, writeFileSync } from 'fs';
-
-import { minify } from 'terser';
-import fg from 'fast-glob';
 import chalk from 'chalk';
 import { rollup } from 'rollup';
 import json from '@rollup/plugin-json';
-
+import { terser } from "rollup-plugin-terser";
+import execa from 'execa';
 import pSeries from 'p-series';
-import each from 'async/each';
 
 import { resolveCwd, srcRollupEntryPath } from './paths';
+import prepend from './rollup-plugin-prepend';
 
 async function main() {
   await pSeries([
     () => rollupBuild(),
-    () => compress(),
+    () => (async () => {
+      await execa('chmod', ['+x', resolveCwd('lib/index.js')]);
+    })(),
   ]);
 
   console.log(chalk `{greenBright 构建成功!}`);
@@ -35,33 +34,17 @@ async function rollupBuild() {
       'async/eachOfSeries',
       'deepmerge',
     ],
-    plugins: [ json() ],
+    plugins: [
+      json(),
+      terser(),
+      prepend('#!/usr/bin/env node'),
+    ],
   });
 
   await bundle.write({
     dir: resolveCwd('lib'),
     format: 'cjs',
   });
-}
-
-async function compress() {
-  await each(await getLibs(), async (src) => {
-    const { code } = minify(
-      readFileSync(src, {encoding: 'utf-8'}),
-      {
-        mangle: false,
-      },
-    );
-
-    writeFileSync(src, code);
-    return;
-  });
-}
-
-async function getLibs() {
-  const libs = await fg(['lib/**/*.js']);
-
-  return libs;
 }
 
 (async () => {

@@ -8,5 +8,5 @@ module.exports = {
   appDirectory,
   resolveCwd,
   docsPath: resolveCwd('docs'),
-  srcRollupEntryPath: resolveCwd('src/cli.js'),
+  srcRollupEntryPath: resolveCwd('src/index.js'),
 };

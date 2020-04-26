@@ -2,10 +2,10 @@
   "name": "setgit-cli",
   "description": "配置 Git。",
   "bin": {
-    "setgit": "lib/cli.js"
+    "setgit": "lib/index.js"
   },
   "scripts": {
-    "simulate": "./simulation.js -h",
+    "simulate": "./lib/index.js -h",
     "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/pack",
     "clean": "npx babel-node ./scripts/clean",
     "license": "npx babel-node ./scripts/license",
@@ -153,7 +153,7 @@
     "p-map": "^4.0.0",
     "p-series": "^2.1.0",
     "rollup": "^2.7.2",
-    "terser": "^4.6.12",
+    "rollup-plugin-terser": "^5.3.0",
     "trash": "^6.1.1",
     "write-file-atomic": "^3.0.3"
   },
