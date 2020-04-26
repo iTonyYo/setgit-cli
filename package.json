@@ -13,7 +13,7 @@
     "lint": "npx eslint --cache .",
     "test": "cross-env NODE_ENV=test npx babel-node ./scripts/test",
     "changelog": "npx auto-changelog -p",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "npx snyk protect",
     "prepublish": "npm run snyk-protect"
   },
   "engines": {
@@ -126,11 +126,8 @@
     "is-git-repository": "^1.1.1",
     "meow": "^6.1.0",
     "nodegit": "^0.26.5",
-    "p-series": "^2.1.0",
     "redent": "^3.0.0",
-    "rollup": "^2.7.2",
     "snyk": "^1.311.0",
-    "terser": "^4.6.12",
     "update-notifier": "^4.1.0"
   },
   "devDependencies": {
@@ -154,6 +151,9 @@
     "mocha": "^7.1.2",
     "nyc": "^15.0.1",
     "p-map": "^4.0.0",
+    "p-series": "^2.1.0",
+    "rollup": "^2.7.2",
+    "terser": "^4.6.12",
     "trash": "^6.1.1",
     "write-file-atomic": "^3.0.3"
   },
