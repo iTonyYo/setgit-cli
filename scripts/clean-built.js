@@ -1,9 +1,6 @@
-import trash from 'trash';
-import { resolveCwd } from './paths';
+import trash from "trash";
+import { resolveCwd } from "./paths";
 
 (async () => {
-  await trash([
-    resolveCwd('esm'),
-    resolveCwd('lib'),
-  ]);
+  await trash([resolveCwd("esm"), resolveCwd("lib")]);
 })();

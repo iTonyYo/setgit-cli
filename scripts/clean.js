@@ -1,16 +1,16 @@
-import execa from 'execa';
-import { resolveCwd } from './paths';
+import execa from "execa";
+import { resolveCwd } from "./paths";
 
 (async () => {
-  const scriptsDir = resolveCwd('scripts');
+  const scriptsDir = resolveCwd("scripts");
 
-  const cleanReports = execa('npx', [
-    'babel-node',
+  const cleanReports = execa("npx", [
+    "babel-node",
     `${scriptsDir}/clean-reports.js`,
   ]);
 
-  const cleanCache = execa('npx', [
-    'babel-node',
+  const cleanCache = execa("npx", [
+    "babel-node",
     `${scriptsDir}/clean-cache.js`,
   ]);
 

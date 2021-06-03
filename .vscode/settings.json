@@ -23,7 +23,7 @@
   "editor.letterSpacing": 1,
   "editor.dragAndDrop": true,
   "editor.wordWrap": "wordWrapColumn",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.wordWrapColumn": 80,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": true,

@@ -1,49 +1,46 @@
-import chalk from 'chalk';
-import { rollup } from 'rollup';
-import json from '@rollup/plugin-json';
+import chalk from "chalk";
+import { rollup } from "rollup";
+import json from "@rollup/plugin-json";
 import { terser } from "rollup-plugin-terser";
-import execa from 'execa';
-import pSeries from 'p-series';
+import execa from "execa";
+import pSeries from "p-series";
 
-import { resolveCwd, srcRollupEntryPath } from './paths';
-import prepend from './rollup-plugin-prepend';
+import { resolveCwd, srcRollupEntryPath } from "./paths";
+import prepend from "./rollup-plugin-prepend";
 
 async function main() {
   await pSeries([
     () => rollupBuild(),
-    () => (async () => {
-      await execa('chmod', ['+x', resolveCwd('lib/index.js')]);
-    })(),
+    () =>
+      (async () => {
+        await execa("chmod", ["+x", resolveCwd("lib/index.js")]);
+      })(),
   ]);
 
-  console.log(chalk `{greenBright 构建成功!}`);
+  console.log(chalk`{greenBright 构建成功!}`);
 }
 
 async function rollupBuild() {
   const bundle = await rollup({
     input: srcRollupEntryPath,
     external: [
-      'meow',
-      'update-notifier',
-      'cosmiconfig',
-      'gradient-string',
-      'is-git-repository',
-      'redent',
-      'chalk',
-      'nodegit',
-      'async/eachOfSeries',
-      'deepmerge',
+      "meow",
+      "update-notifier",
+      "cosmiconfig",
+      "gradient-string",
+      "is-git-repository",
+      "redent",
+      "chalk",
+      "nodegit",
+      "async/eachOfLimit",
+      "async/asyncify",
     ],
-    plugins: [
-      json(),
-      terser(),
-      prepend('#!/usr/bin/env node'),
-    ],
+    plugins: [json(), terser(), prepend("#!/usr/bin/env node")],
   });
 
   await bundle.write({
-    dir: resolveCwd('lib'),
-    format: 'cjs',
+    dir: resolveCwd("lib"),
+    format: "cjs",
   });
 }
 
@@ -51,6 +48,6 @@ async function rollupBuild() {
   try {
     await main();
   } catch (err) {
-    throw(err);
+    throw err;
   }
 })();

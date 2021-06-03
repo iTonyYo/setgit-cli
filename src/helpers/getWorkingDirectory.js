@@ -1,6 +1,6 @@
-import isEmpty from './utilities/isEmpty';
+import isEmpty from "./isEmpty";
 
-export default twd => ({
+export default (twd) => ({
   twd: isEmpty(twd) ? process.cwd() : twd,
   cwd: process.cwd(),
 });

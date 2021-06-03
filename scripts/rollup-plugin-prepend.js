@@ -1,8 +1,8 @@
-export default function prepend(content = '') {
+export default function prepend(content = "") {
   return {
-    name: 'prepend',
-    renderChunk (code) {
-      return `${content}\n${code}`
-    }
-  }
+    name: "prepend",
+    renderChunk(code) {
+      return `${content}\n${code}`;
+    },
+  };
 }
