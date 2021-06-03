@@ -2,7 +2,7 @@
 
 # $ setgit
 
-多个项目 Git 配置其实一致，但不想手动重复设置，😱；想一次应用多个配置规则到 Git 项目，🤔；全局 Git 配置不适用所有项目，🥶…… 🥳，告诉你，`setgit-cli` 可以解决这些问题，自动化 Git 设置，提升多项目间 Git 设置操作的可重复性、可分享性。🤤
+多个项目的 Git 配置是一致的，频繁重复手动设置太麻烦了，😱；想一次应用多个配置规则到 Git 项目，🤔；全局 Git 配置不适用所有项目，不同项目有特定的 Git 配置需求 🥶…… 🥳，`setgit-cli` 可以解决这些问题，多项目间复用 Git 配置规则，自动化设置 Git。🤤
 
 ![Image of Yaktocat](https://raw.githubusercontent.com/iTonyYo/setgit-cli/master/example.gif)
 
