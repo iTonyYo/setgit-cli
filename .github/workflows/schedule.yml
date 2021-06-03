@@ -1,0 +1,20 @@
+name: 刷新个人 Github 首页 WakaTime 概览
+
+on:
+  push:
+    branches: master
+
+  schedule:
+    - cron: "0 */3 * * *"
+
+jobs:
+  update-gist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: 更新 Gist
+        uses: matchai/waka-box@master
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: f0c9746ee9d7a0c10566bf67fa49e5a9
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
