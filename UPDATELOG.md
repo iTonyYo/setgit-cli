@@ -1,8 +1,13 @@
 # [`setgit-cli`][setgit-cli] 更新日志
 
-## [v1.1.3](https://github.com/iTonyYo/setgit-cli/compare/v1.1.2...v1.1.3), 2021-06-03
+## [v1.1.4](https://github.com/iTonyYo/setgit-cli/compare/v1.1.3...v1.1.4), 2021-06-03
+
+- [[`14a8d59`](https://github.com/iTonyYo/setgit-cli/commit/14a8d59a5d5ee39a51949d8790b50ce44b65a4fc)] 书写、性能驱动重构
+
+## [v1.1.3](https://github.com/iTonyYo/setgit-cli/compare/v1.1.2...v1.1.3), 2021-06-04
 
 - [[`6b0c98b`](https://github.com/iTonyYo/setgit-cli/commit/6b0c98bf5410cc6e1962f5057c146a9c911df56a)] 升级依赖
+- [[`7dd8932`](https://github.com/iTonyYo/setgit-cli/commit/7dd89326018fcac9c26df0c94d60f95d17a18147)] 发版: :bookmark: v1.1.3
 - [[`560d61b`](https://github.com/iTonyYo/setgit-cli/commit/560d61bc16ed4763a60bfcd1f79525edde6b8c94)] fix: .snyk & package.json to reduce vulnerabilities
 - [[`5b48159`](https://github.com/iTonyYo/setgit-cli/commit/5b4815974e2b37981f2238859ea7d96588cf6edc)] 功能: :gear: 更新若干 Git 化名配置
 - [[`b4a4e5f`](https://github.com/iTonyYo/setgit-cli/commit/b4a4e5f9bfe4e2983371d9a8a5dbf93a0da4e81f)] 更新若干 Git 化名配置
