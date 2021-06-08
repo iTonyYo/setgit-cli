@@ -24,15 +24,21 @@ async function rollupBuild() {
   const bundle = await rollup({
     input: srcRollupEntryPath,
     external: [
-      "meow",
       "update-notifier",
+
       "cosmiconfig",
+
+      "meow",
       "gradient-string",
-      "is-git-repository",
       "redent",
       "chalk",
+
+      "is-git-repository",
       "nodegit",
-      "async/eachOfLimit",
+
+      "deepmerge",
+
+      "async/eachOfSeries",
       "async/asyncify",
     ],
     plugins: [json(), terser(), prepend("#!/usr/bin/env node")],
