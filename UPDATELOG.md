@@ -1,8 +1,16 @@
 # [`setgit-cli`][setgit-cli] 更新日志
 
-## [v1.1.4](https://github.com/iTonyYo/setgit-cli/compare/v1.1.3...v1.1.4), 2021-06-03
+## [v1.1.5](https://github.com/iTonyYo/setgit-cli/compare/v1.1.4...v1.1.5), 2021-06-08
+
+- [[`f2de143`](https://github.com/iTonyYo/setgit-cli/commit/f2de1434f795f22661e0eeb04cbc5edb85f65a0f)] 升级依赖
+- [[`360864e`](https://github.com/iTonyYo/setgit-cli/commit/360864e602c5a3c7551f9b09f5b4f98d2ac93262)] 修复："setgit-cli" v1.1.4 并没能成功配置 Git
+- [[`bc1ebce`](https://github.com/iTonyYo/setgit-cli/commit/bc1ebce76939d4d7e2da1a62e927e1e27e6ccf46)] 更新 README.md
+- [[`90df415`](https://github.com/iTonyYo/setgit-cli/commit/90df41516c259c64fbdcacb4b42fe26be38d8f99)] 重装 deepmerge 依赖
+
+## [v1.1.4](https://github.com/iTonyYo/setgit-cli/compare/v1.1.3...v1.1.4), 2021-06-04
 
 - [[`14a8d59`](https://github.com/iTonyYo/setgit-cli/commit/14a8d59a5d5ee39a51949d8790b50ce44b65a4fc)] 书写、性能驱动重构
+- [[`8c3aa99`](https://github.com/iTonyYo/setgit-cli/commit/8c3aa99f85d5059f2b96a0d393d369bf9196f472)] 发版: :bookmark: v1.1.4
 
 ## [v1.1.3](https://github.com/iTonyYo/setgit-cli/compare/v1.1.2...v1.1.3), 2021-06-04
 
