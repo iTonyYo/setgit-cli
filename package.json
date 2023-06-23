@@ -127,8 +127,8 @@
     "meow": "^9.0.0",
     "nodegit": "^0.27.0",
     "redent": "^3.0.0",
-    "snyk": "^1.623.0",
-    "update-notifier": "^5.1.0"
+    "snyk": "^1.685.0",
+    "update-notifier": "^6.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
